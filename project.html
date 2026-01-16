@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITNATION | "Enter for the fitness. Stay for the rewards."</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">FIT<span>NATION</span></div>
+        <ul class="nav-links">
+           <li><a href="#home">Home</a></li>
+           <li><a href="#challenges">Challenges</a></li>
+           <li><a href="#gyms">Partner Gyms</a></li>
+           <li><a href="javascript:void(0)" onclick="openAbout()">About Us</a></li>
+        </ul>        
+        <button class="cta-nav" onclick="openModal()">Get Membership</button>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>DOMINATE YOUR CITY</h1>
+            <h4>"Enter for the <span>FITNESS</span>. Stay for the <span>REWARDS</span>."</h4>
+            <p>One Membership. 500+ Gyms. Real Cash Rewards.</p>
+            <div class="hero-btns">
+                <a href="#challenges" class="btn-primary">View Challenges</a>
+                <a href="#gyms" class="btn-primary">Find a Gym</a>
+            </div>
+        </div>
+    </header>
+    
+    <section id="challenges" class="section">
+    <h2 class="section-title">Upcoming Events</h2>
+
+    <div class="event-strip" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&q=80');">
+        <button class="join-btn-left">JOIN EVENT</button>
+        <div class="event-info">
+            <h3 class="event-name">HYROX CITY SPRINT</h3>
+            <div class="timer-pop" data-date="Dec 31, 2025 12:00:00">00:00:00:00</div>
+        </div>
+    </div>
+
+    <div class="event-strip" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&q=80');">
+        <button class="join-btn-left">JOIN EVENT</button>
+        <div class="event-info">
+            <h3 class="event-name">TITAN ENDURANCE</h3>
+            <div class="timer-pop" data-date="Jan 15, 2026 09:00:00">00:00:00:00</div>
+        </div>
+    </div>
+
+    <div class="event-strip" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80');">
+        <button class="join-btn-left">JOIN EVENT</button>
+        <div class="event-info">
+            <h3 class="event-name">NEON NIGHT RUN</h3>
+            <div class="timer-pop" data-date="Feb 01, 2026 20:00:00">00:00:00:00</div>
+        </div>
+    </div>
+
+    <div class="event-strip" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&q=80');">
+        <button class="join-btn-left">JOIN EVENT</button>
+        <div class="event-info">
+            <h3 class="event-name">ELITE POWER LIFT</h3>
+            <div class="timer-pop" data-date="Feb 20, 2026 10:00:00">00:00:00:00</div>
+        </div>
+    </div>
+    </section>
+    
+    <section id="gyms" class="section gyms-section">
+    <h2 class="section-title">Access 500+ Partner Gyms</h2>
+    <p class="section-subtitle">Your membership works at any of these premium locations.</p>
+    
+    <div class="gym-search">
+        <input type="text" id="gymInput" placeholder="Enter your city (e.g., London, New York)...">
+        <button class="btn-primary">Search</button>
+    </div>
+
+    <div class="gym-grid">
+        <div class="gym-item">
+            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&q=80" alt="Gym">
+            <h4>Apex Fitness Hub</h4>
+            <p>Gulistan-e-Johar</p>
+        </div>
+        <div class="gym-item">
+            <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&q=80" alt="Gym">
+            <h4>Titan Performance</h4>
+            <p>Gulshan-e-Iqbal</p>
+        </div>
+        <div class="gym-item">
+            <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&q=80" alt="Gym">
+            <h4>Iron Sanctuary</h4>
+            <p>KARSAZ</p>
+        </div>
+        <div class="gym-item">
+            <img src="https://images.unsplash.com/photo-1623874514711-0f321325f318?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z3ltc3xlbnwwfHwwfHx8MA%3D%3D" alt="Gym">
+            <h4>Get Fit</h4>
+            <p>North Nazimabad</p>
+        </div>
+    </div>
+    </section>
+
+    <div id="membershipModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>JOIN THE MOVEMENT</h2>
+        <p>One membership. Unlimited access.</p>
+        <form id="signupForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <select required>
+                <option value="" disabled selected>Select Your Plan</option>
+                <option value="BASIC">Basic Plan (Monthly (12k))</option>
+                <option value="PRO">Pro Plan (Yearly(100k) + yearly access to Challenges/Events)</option>
+                <option value="ELITE">Elite Plan ((120k) + Free access to events and challenges all year round)</option>
+            </select>
+            <button type="submit" class="btn-primary">GET ACCESS NOW</button>
+        </form>
+    </div>
+    </div>
+
+    <div id="aboutOverlay" class="overlay">
+    <span class="close-overlay" onclick="closeAbout()">&times;</span>
+    <div class="overlay-content">
+        <h1 class="glow-text">YOUR LIMITS ARE AN ILLUSION.<br>YOUR REWARDS ARE REAL.</h1>
+        <hr class="neon-line">
+        
+        <p class="manifesto-p">
+            FITNATION was born from a simple realization: the current fitness industry is fragmented, expensive, and uninspiring. 
+            In a modern economy, your health should be an asset, not an expense. We have dismantled the walls of the 'single-building' 
+            gym membership to give you a nationwide playground.
+        </p>
+
+        <div class="opportunity-grid">
+            <div class="opp-card">
+                <h3>🔓 BORDERLESS ACCESS</h3>
+                <p>One membership. 500+ premium gyms. Your training travels with you, nationwide.</p>
+            </div>
+            <div class="opp-card">
+                <h3>💰 THE PRIZE ECONOMY</h3>
+                <p>Fitness with stakes. Massive cash prizes and elite rewards for the hardest workers.</p>
+            </div>
+            <div class="opp-card">
+                <h3>🤝 SOCIAL VICTORY</h3>
+                <p>Connect with a community of achievers. Even without the podium, the network you build is your win.</p>
+            </div>
+        </div>
+
+        <div class="partner-backing">
+            <h4>POWERED BY GIANTS</h4>
+            <p>Our movement is fueled by <strong>Red Bull</strong> for courage, <strong>Honda</strong> for precision, and <strong>Milo</strong> for foundation—building not just your body, but your personality.</p>
+        </div>
+
+        <h2 class="war-cry">ENTER FOR THE FITNESS. STAY FOR THE REWARDS.</h2>
+        <button class="btn-primary" onclick="closeAbout()">JOIN THE NATION</button>
+    </div>
+    </div>
+
+    <div class="floating-contact">
+    <a href="mailto:support@fitnation.com">CONTACT US</a>
+    </div>
+
+    <section class="partners-section">
+    <p>POWERED BY GIANTS</p>
+    <div class="partner-logos">
+        <img src="https://pimwp.s3-accelerate.amazonaws.com/2022/02/Red-Bull-logo.png" alt="RedBull">
+        <img src="https://miro.medium.com/1*cJR_m-7x8R19_2-vPK-JdA.jpeg" alt="Gymshark">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/31/Milo_brand_logo.svg/1200px-Milo_brand_logo.svg.png" alt="Milo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlAHSjq7Gk3-FboSL_OMkC42bdCkxD12e4mw&s" alt="Nike ">
+    </div>
+    </section>
+
+    <footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <div class="logo">FIT<span>NATION</span></div>
+            <p>Uplifting the nation, one rep at a time.</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>QUICK LINKS</h4>
+            <ul>
+                <li><a href="#challenges">Active Events</a></li>
+                <li><a href="#gyms">Find a Hub</a></li>
+                <li><a href="javascript:void(0)" onclick="openAbout()">ABOUT US</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-download">
+            <h4>TAKE THE MOVEMENT MOBILE</h4>
+            <div class="app-badges">
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2025 FITNATION GLOBAL. ALL RIGHTS RESERVED.
+    </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
